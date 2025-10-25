@@ -1,0 +1,15 @@
+[project]
+name = "metacheck-poc"
+version = "0.1.0"
+description = "Lightweight experimental backend for MetaCheck metadata extraction"
+readme = "README.md"
+requires-python = ">=3.12.8"
+dependencies = [
+    "aiohttp>=3.13.1",
+    "beautifulsoup4>=4.14.2",
+    "fastapi>=0.119.1",
+    "python-dateutil>=2.9.0.post0",
+    "requests>=2.32.5",
+    "starlette>=0.48.0",
+    "uvicorn>=0.38.0",
+]
