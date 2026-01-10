@@ -28,7 +28,7 @@ The system consists of:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/backend/craap/
@@ -49,7 +49,7 @@ frontend/
 
 ---
 
-## 🚀 Running MetaCheck (Without Docker)
+## Running MetaCheck (Without Docker)
 
 ### 1. Install dependencies
 
