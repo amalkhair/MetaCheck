@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Send URL to Local Analyzer",
+  "version": "1.0",
+  "description": "Sends current tab URL as POST to http://localhost:10124/analyze/url?url=",
+  "permissions": ["activeTab", "notifications"],
+  "host_permissions": ["http://localhost:10124/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Analyze URL",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icons/icon48.png"
+  }
+}

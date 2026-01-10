@@ -1,0 +1,18 @@
+[project]
+name = "craap"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.8"
+dependencies = [
+    "aiohttp>=3.13.1",
+    "beautifulsoup4>=4.14.2",
+    "dnspython>=2.8.0",
+    "dynaconf>=3.2.12",
+    "fastapi>=0.119.1",
+    "playwright>=1.55.0",
+    "python-dateutil>=2.9.0.post0",
+    "python-multipart>=0.0.20",
+    "requests>=2.32.5",
+    "uvicorn>=0.38.0",
+]

@@ -1,0 +1,205 @@
+/* ===== Base ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #202124;
+}
+
+/* ===== Layout ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.topbar__brand {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.topbar__nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  text-align: center;
+  margin: 28px 0 40px;
+}
+
+.hero__title {
+  font-size: 48px;
+  margin: 8px 0;
+}
+
+.hero__subtitle {
+  color: #444;
+  font-size: 18px;
+  margin: 6px 0 22px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.search__form {
+  width: 100%;
+  max-width: 820px;
+}
+
+.search__input {
+  width: 100%;
+  padding: 22px 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.search__cta {
+  width: 100%;
+  max-width: 820px;
+}
+
+.button--primary {
+  width: 100%;
+  padding: 18px 24px;
+  background: #3273ff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.raw-toggle {
+  margin-top: 8px;
+  text-align: right;
+}
+
+.raw-toggle__button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #eee;
+}
+
+/* ===== Cards ===== */
+.cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.card {
+  width: 300px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #f5f7fb;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.03);
+}
+
+.card__title {
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.card__label {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* ===== Results ===== */
+.results {
+  max-width: 820px;
+  margin: 24px auto;
+  display: grid;
+  gap: 12px;
+}
+
+.result-field {
+  display: none;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.result-field--error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+/* ===== JSON Modal ===== */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1190;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(920px, 90%);
+  max-height: 75vh;
+  z-index: 1200;
+}
+
+.modal__content {
+  position: relative;
+  width: 100%;
+}
+
+.modal__json {
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+  background: #0f1720;
+  color: #e6eef8;
+  overflow: auto;
+  max-height: 75vh;
+  white-space: pre-wrap;
+  font-family: Menlo, monospace;
+  font-size: 13px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+}
+
+/* ===== Copy Button ===== */
+.copy-btn {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #d0d0d0;
+  background: #fafafa;
+  cursor: pointer;
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Send to CRAAP</title>
+    <style>
+      body { font-family: Arial, sans-serif; width: 360px; padding: 12px; color:#222; }
+      button { padding: 8px 12px; }
+      .row { margin-top: 8px; }
+      .label { font-weight: 600; margin-right: 6px; color:#444; }
+      a#urlText { color: #0b66ff; text-decoration: none; word-break: break-all; }
+      a#urlText:hover { text-decoration: underline; }
+      .status { font-weight: 600; }
+      .status.ok { color: #0a7a0a; }
+      .status.err { color: #b00020; }
+
+      /* Compact versions of demo styles */
+      #result-container { margin-top: 8px; display: grid; gap:6px; }
+      #result-title { font-size: 16px; font-weight:600; color:#111; }
+      .meta { font-size: 12px; color:#333; }
+      #result-extract { padding: 8px; background: #fff; border-radius:6px; font-size:13px; color:#202124; }
+      #response { padding:8px; background:#f3f3f4; border-radius:6px; font-family: monospace; font-size:12px; max-height:200px; overflow:auto; }
+      #result-error { color:#b00020; font-weight:600; margin-top:6px; }
+      footer#result-footer { margin-top:8px; font-size:12px; color:#444; }
+
+      pre { background: #f6f8fa; border: 1px solid #e1e4e8; padding: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; font-size: 12px; max-height: 220px; overflow: auto; white-space: pre-wrap; word-break: break-word; margin: 6px 0 0 0; }
+      #headersPre { max-height: 120px; }
+      #result { margin-top: 8px; display: none; }
+      .muted { color: #666; font-size: 12px; }
+
+      /* New styles for copy buttons */
+      .copy-btn {
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        margin-left: 4px;
+        padding: 4px 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .copy-btn:hover {
+        background: #e0e0e0;
+      }
+      .copy-btn:active {
+        background: #d0d0d0;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="showUrl">Send to CRAAP</button>
+
+    <div id="result" role="status" aria-live="polite">
+      <div id="result-container">
+        <div id="result-title" hidden></div>
+        <div id="result-url" class="meta" hidden>URL: <a id="urlText" href="#" target="_blank"></a></div>
+        <div id="result-pid" class="meta" hidden></div>
+        <div id="result-publication_date" class="meta" hidden></div>
+        <div id="result-last_modification_date" class="meta" hidden></div>
+        <div id="result-author" class="meta" hidden></div>
+        <div id="result-authors" class="meta" hidden></div>
+        <div id="result-description" class="meta" hidden></div>
+        <div id="result-keywords" class="meta" hidden></div>
+        <div id="result-publisher" class="meta" hidden></div>
+        <div id="result-extract" hidden></div>
+
+        <div style="display:flex;gap:8px;align-items:center;margin-top:6px;">
+          <button id="toggle-json" type="button" hidden>Show raw JSON</button>
+        </div>
+        <pre id="response" hidden></pre>
+        <div id="result-error" hidden></div>
+      </div>
+
+      <footer id="result-footer" hidden>
+        <div id="result-analysis_id"><span id="result-analysis_text"></span></div>
+        <div id="result-processed_at"></div>
+        <!-- confidence removed -->
+      </footer>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

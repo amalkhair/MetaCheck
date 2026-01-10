@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MetaCheck — CRAAP Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar__brand">MetaCheck</div>
+  <nav class="topbar__nav">
+    <a href="about-craap.html">About MetaCheck</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1 class="hero__title">Metadata for your CRAAP analysis</h1>
+    <p class="hero__subtitle">Instantly retrieve Currency, Authority, and Relevance details for any online article.</p>
+
+    <div class="search">
+
+      <form id="main-form" class="search__form" action="http://localhost:10124/analyze/url" method="post">
+        <input id="main-input" class="search__input" type="text" name="url" placeholder="Paste article URL here..." required autofocus />
+        <button type="submit" hidden></button>
+      </form>
+
+      <div class="search__cta">
+        <button id="analyze-btn" class="button--primary">View CRAAP indicators</button>
+
+        <div class="raw-toggle">
+          <button id="toggle-json" class="raw-toggle__button">Show raw JSON</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cards">
+
+    <article class="card">
+      <h3 class="card__title">Currency</h3>
+      <div class="card__label">Publication date:</div>
+      <div id="result-publication_date">Not available</div>
+
+      <div class="card__label" style="margin-top:12px;">Last updated:</div>
+      <div id="result-last_modification_date">Not available</div>
+    </article>
+
+    <article class="card">
+      <h3 class="card__title">Authority</h3>
+      <div class="card__label">Persistent Identifier:</div>
+      <div id="result-pid">Not available</div>
+
+      <div class="card__label" style="margin-top:12px;">Author:</div>
+      <div id="result-author">Not available</div>
+
+      <div class="card__label" style="margin-top:12px;">Authors:</div>
+      <div id="result-authors">Not available</div>
+    </article>
+
+    <article class="card">
+      <h3 class="card__title">Relevance</h3>
+      <div class="card__label">Title:</div>
+      <div id="result-title">Not available</div>
+
+      <div class="card__label" style="margin-top:12px;">Description:</div>
+      <div id="result-description">Not available</div>
+
+      <div class="card__label" style="margin-top:12px;">Keywords:</div>
+      <div id="result-keywords">Not available</div>
+    </article>
+
+  </section>
+
+<!--  <section class="results">-->
+<!--    <div id="result-url" class="result-field"></div>-->
+<!--    <div id="result-publisher" class="result-field"></div>-->
+<!--    <div id="result-extract" class="result-field"></div>-->
+<!--    <div id="result-analysis_id" class="result-field"></div>-->
+<!--    <div id="result-processed_at" class="result-field"></div>-->
+<!--    <div id="result-error" class="result-field result-field&#45;&#45;error"></div>-->
+<!--  </section>-->
+
+  <div id="modal-backdrop" class="modal-backdrop"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <pre id="modal-json" class="modal__json"></pre>
+      <button id="modal-close" class="modal__close">Close</button>
+    </div>
+  </div>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
