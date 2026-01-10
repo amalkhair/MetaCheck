@@ -1,7 +1,8 @@
 
 ---
 
-# MetaCheck — Webpage Metadata Analyzer
+# MetaCheck : Metadata Extraction Tool 
+Personal Project for Fontys ICT Open Learning, Semester 2.
 
 MetaCheck is a lightweight web application that extracts objective metadata from online articles and webpages.  
 Instead of generating credibility scores, MetaCheck surfaces structured metadata aligned with key CRAAP dimensions — **Currency**, **Authority**, and **Relevance** — helping users make informed judgments about online content.
